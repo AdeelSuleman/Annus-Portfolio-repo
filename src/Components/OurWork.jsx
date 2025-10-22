@@ -4,9 +4,9 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import heroImg from "../assets/workSkill/concept.jpg";
-import icon1 from "../assets/WorkProcess/icon1.png";
-import icon2 from "../assets/WorkProcess/icon2.png";
-import icon3 from "../assets/WorkProcess/icon3.png";
+import icon1 from "../assets/WorkProcess/Icon1.png";
+import icon2 from "../assets/WorkProcess/Icon2.png";
+import icon3 from "../assets/WorkProcess/Icon3.png";
 
 const OurWork = () => {
   // Section Heading Animation
