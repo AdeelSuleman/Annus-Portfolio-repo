@@ -17,7 +17,7 @@ import ThriveCart from "../assets/workSkill/Thrivecart.png";
 import jot_and_Type from "../assets/workSkill/jot_and_type_form.png";
 import Clickup from "../assets/workSkill/Clickup.png";
 
-const WorkSkill = () => {
+const SkillsWorks = () => {
   const skills = [
     {
       id: "01",
@@ -278,4 +278,4 @@ const WorkSkill = () => {
   );
 };
 
-export default WorkSkill;
+export default SkillsWorks;

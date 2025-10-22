@@ -9,7 +9,7 @@ import OurWork from '../Components/OurWork'
 import Contact from '../Components/Contact'
 import Footer from './Footer'
 import Testimonials from '../Components/Testimonials'
-import WorkSkill from '../Components/workSkill'
+import SkillsWorks from '../Components/SkillsWorks'
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
       <About/>
       <MyServices/>
       <HireMe/>
-      <WorkSkill/>
+      <SkillsWorks/>
       <OurWork/>
       <Testimonials/>
       <Contact/>
