@@ -85,12 +85,13 @@
     import GHL_Gif from '../assets/Automations/GHL_Automation/highlevel.png'
     import QuoteGenerator from '../assets/Automations/GHL_Automation/QuoteGenerator/QuoteGIF.gif'
     import SalesPipline_Banner from '../assets/Automations/GHL_Automation/SalesPipeline/SalesPipline.gif'
+    import Pipline_Banner from '../assets/Automations/GHL_Automation/PipelineAutomation/Automation1.jpg'
 
 
 
     // GoHighLevel Automation Pictures
     // QuoteGenerator
-    import Ghl_QG_AutoForm from '../assets/Automations/GHL_Automation/QuoteGenerator/form.jpg'
+    import Ghl_QG_AutoForm from '../assets/Automations/GHL_Automation/QuoteGenerator/Form.jpg'
     import Ghl_QG_Auto1 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto1.jpg'
     import Ghl_QG_Auto2 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto2.jpg'
     import Ghl_QG_Email1 from '../assets/Automations/GHL_Automation/QuoteGenerator/email1.jpg'
@@ -606,7 +607,7 @@ export const services = [
                     P_id: 3002,
                     P_Heading: 'Pipeline Automation',
                     P_SubHeading: '(lead nurture + appt booking + Payment + document submisison + Close deal + followup)',
-                    P_Banner: QuoteGenerator,
+                    P_Banner: Pipline_Banner,
                     P_Gif: '',
                     P_Mobile_GIF: '',
                     P_Url: '',
