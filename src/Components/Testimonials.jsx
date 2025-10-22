@@ -122,7 +122,8 @@ const Testimonials = () => {
         className="mx-auto 
         xs:w-[90%]
         md:w-[80vw]
-        xl:w-[1260px]"
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         <h1
           ref={headingRef}
@@ -134,15 +135,18 @@ const Testimonials = () => {
           <span className="text-colortext">What My</span> Clients Say
         </h1>
 
+        {/* Section Sub Heading */}
         <p
           ref={textRef}
-          className="text-center font-light font-outfit text-colortext mt-3
+          className="text-center font-light font-outfit text-colortext mt-3 
                     xs:w-full xs:text-Paragraph6
+                    sm:w-[400px] mx-auto
+                    md:w-[500px] 
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
                     xl:w-[30vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
 
         <section

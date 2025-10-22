@@ -82,7 +82,7 @@ const ClientSlider = () => {
 
   return (
     <section
-      className="mx-auto py-6 xs:w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[1260px]"
+      className="mx-auto py-6 "
     >
       <div className="slider-container">
           <Swiper
@@ -96,7 +96,7 @@ const ClientSlider = () => {
         slidesPerView={5}
         spaceBetween={20}
         breakpoints={{
-          1024: { slidesPerView: 5 },
+          1024: { slidesPerView: 6 },
           768: { slidesPerView: 3 },
           300: { slidesPerView: 2 },
         }}

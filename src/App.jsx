@@ -1,75 +1,96 @@
-import { useEffect, useState } from 'react'
-import './index.css'
-import Home from './AppLayout/Home'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { services } from './Data/ServiceData'
-import Services from './AppLayout/Services'
-import Preview from './AppLayout/Preview'
-import ScrollToTop from './Components/ScrollToTop'
+import { useEffect, useState } from "react";
+import "./index.css";
+import Home from "./AppLayout/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { services } from "./Data/ServiceData";
+import Bg from "../src/assets/bg.png";
+import Services from "./AppLayout/Services";
+import Preview from "./AppLayout/Preview";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
-
-  // Data store to localStorage
+  // store data in localStorage
   useEffect(() => {
-    // agar pehle se data store nahi hai to hi save karo
     if (!localStorage.getItem("servicesData")) {
       localStorage.setItem("servicesData", JSON.stringify(services));
     }
   }, []);
 
   const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Home/>
-    },
-    {
-      path: '/projects',
-      element: <Services/>,
-    },
-    {
-      path: '/preview',
-      element: <Preview/>,
-    }
-  ])
+    { path: "/", element: <Home /> },
+    { path: "/projects", element: <Services /> },
+    { path: "/preview", element: <Preview /> },
+  ]);
 
-  const [isLicensed, setIsLicensed] = useState(true);
+  const [isLicensed, setIsLicensed] = useState(false);
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(true); // 🔄 loader state
 
   useEffect(() => {
-  const checkLicense = async () => {
-    try {
-      const res = await fetch(
-        "https://raw.githubusercontent.com/AdeelSuleman/AnnaPorfolio-License/main/license.json",
-        { cache: "no-store" }
-      );
-      const data = await res.json();
-      setIsLicensed(Boolean(data.active));
-      setMessage(data.message || "");
-    } catch (error) {
-      console.error("License check failed:", error);
-      setIsLicensed(false);
-      setMessage("License verification failed.");
-    }
-  };
+    const checkLicense = async () => {
+      try {
+        const res = await fetch("https://jsonkeeper.com/b/8BX1V", {
+          cache: "no-store",
+        });
 
-  checkLicense();
-}, []);
+        if (!res.ok) {
+          throw new Error("License file not found");
+        }
 
-  if (!isLicensed) {
-    return(
-      <div className='w-full h-screen flex items-center justify-center bg-gray-900 text-white flex-col gap-2'>
-        <h1 className='text-2xl font-bold'>⚠ Site Block</h1>
-        <p>{message}</p>
+        const data = await res.json();
+        setIsLicensed(Boolean(data.active));
+        setMessage(data.message || "");
+      } catch (error) {
+        console.error("License check failed:", error);
+        setIsLicensed(false);
+        setMessage("License verification failed.");
+      } finally {
+        setIsLoading(false); // ✅ loader off after check
+      }
+    };
+
+    checkLicense();
+  }, []);
+
+  // 🔄 Loader UI
+  if (isLoading) {
+    return (
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020312] w-full h-full z-20">
+        <div className="relative w-16 h-16 mb-4">
+          <div className="absolute inset-0 rounded-full border-4 border-t-transparent border-white animate-spin-slow"></div>
+          <div className="absolute inset-2 rounded-full border-4 border-b-transparent border-gray-500 animate-spin-reverse"></div>
+        </div>
+        <p className="text-white text-lg tracking-wider animate-pulse">
+          Loading...
+        </p>
+        <h1 className="text-button text-4xl font-Manrope font-bold mt-10">
+          Welcome
+        </h1>
       </div>
     );
   }
 
+
+  if (!isLicensed) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center flex-col gap-2 select-none relative">
+        <div className="absolute top-[30%]">
+        <h1 className="text-2xl text-center">⚠ This site can't be reached</h1>
+        <p className="w-full text-center mt-5 font-semibold text-xl">{message}</p>
+          </div>
+        <img src={Bg} className="select-none w-[70%] h-auto" />
+        <div className="bg-black/0 w-full h-full absolute inset-0"></div>
+      </div>
+    );
+  }
+
+  // ✅ Normal UI
   return (
     <>
-      <RouterProvider router={router}/>
-      <ScrollToTop/>
+      <RouterProvider router={router} />
+      <ScrollToTop />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

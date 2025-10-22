@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
-import me from "../assets/Aboutme.webp";
+import me from "../assets/Annus.png";
 import OrangeCircle from "../assets/CircleOrange.png";
 import YellowCircle from "../assets/CircleYellow.png";
 
@@ -12,8 +12,9 @@ const HireMe = () => {
         className="mx-auto grid justify-between items-center gap-10
             xs:w-[90%] xs:grid-cols-1 xs:py-16
             md:w-[80vw]
-            lg:grid-cols-2 lg:py-20
-            xl:w-[1260px]"
+            lg:grid-cols-2 lg:py-20 lg:w-[90%]
+            xl:w-[90vw]
+            2xl:w-[1280px]"
       >
         {/* Left Side */}
         <div className="w-full xs:order-2 lg:order-1">
@@ -55,7 +56,9 @@ const HireMe = () => {
 
           <div
             className="bg-[#181923] rounded-xl w-full grid justify-between items-center gap-5
-                            xs:mt-5 xs:py-5 xs:px-8 xs:grid-cols-1
+                            xs:mt-5 xs:py-5 xs:px-8 xs:grid-cols-1 
+                            sm:grid-cols-3
+                            md:grid-cols-3
                             lg:mt-3 lg:py-4 lg:px-6 lg:grid-cols-3"
           >
             {/* div one */}
@@ -201,7 +204,7 @@ const HireMe = () => {
                                     lg:w-[420px] lg:h-[420px]
                                     xl:w-[500px] xl:h-[500px]"
             >
-              <img src={me} className="w-full h-full" />
+              <img src={me} className="w-full h-full object-contain" />
             </div>
 
             {/* Yellow Circle */}

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { IoMdCloudDownload } from "react-icons/io";
-import me from "../assets/Aboutme.webp";
+import me from "../assets/AnnusHalf.png";
 import OrangeCircle from "../assets/CircleOrange.png";
 import YellowCircle from "../assets/CircleYellow.png";
 
@@ -14,7 +14,8 @@ const About = () => {
         xs:w-[90%] xs:grid-cols-1 xs:py-16
         md:w-[80vw]
         lg:grid-cols-2 lg:py-20
-        xl:w-[1260px]"
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         {/* Left Side */}
         <div className="w-full flex justify-center items-center">
@@ -44,7 +45,7 @@ const About = () => {
                 lg:w-[420px] lg:h-[420px]
                 xl:w-[500px] xl:h-[500px]"
             >
-              <img src={me} className="w-full h-full" />
+              <img src={me} className="w-full h-auto object-contain" />
             </div>
 
             {/* Yellow Circle */}
@@ -247,29 +248,6 @@ const About = () => {
               <h1 className="">Contact me</h1>
               <FaArrowRightFromBracket className="" />
             </motion.button>
-
-            {/* Download My resume  */}
-            <a 
-              href="/cv.pdf"
-              download="Annus-Irfan-CV.pdf">
-            {/* <motion.button
-              initial={{ y: 60, opacity: 0 }} // suruwat me halka upar aur hidden
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{
-                duration: 0.7,
-                ease: "linear",
-              }}
-              //   viewport={{ once: true, amount: 0.2 }}
-              className="flex justify-between items-center font-semibold font-outfit rounded-full transition-all duration-300 cursor-pointer text-button border-2 border-button
-                                xs:px-6 xs:py-3 xs:gap-2 xs:text-Paragraph6
-                                lg:px-4 lg:py-2 lg:gap-1 lg:text-[14px]
-                                xl:px-6 xl:py-3 xl:gap-2 xl:text-Paragraph6
-                                hover:bg-button hover:text-colortext"
-            >
-              <h1 className="">Download my resume</h1>
-              <IoMdCloudDownload className="" />
-            </motion.button> */}
-            </a>
           </div>
         </div>
       </div>

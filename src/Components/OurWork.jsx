@@ -82,17 +82,18 @@ const OurWork = () => {
       {/* Main Section */}
       <div
         className="mx-auto relative z-20
-        xs:w-[90%]
-        md:w-[80vw]
-        xl:w-[1260px]"
+                    xs:w-[90%]
+                    md:w-[730px]
+                    xl:w-[90vw]
+                    2xl:w-[1280px]"
       >
         {/* Section Heading */}
         <h1
           ref={headingRef}
           className="text-center font-medium font-Manrope text-button
-    xs:text-Heading6
-    lg:text-Heading4
-    xl:text-Heading1"
+                    xs:text-Heading6
+                    lg:text-Heading4
+                    xl:text-Heading1"
         >
           <span className="text-colortext">Our Work</span> Progress
         </h1>
@@ -100,13 +101,15 @@ const OurWork = () => {
         {/* Section Sub Heading */}
         <p
           ref={textRef}
-          className="text-center font-light font-outfit text-colortext mt-3
+          className="text-center font-light font-outfit text-colortext mt-3 
                     xs:w-full xs:text-Paragraph6
+                    sm:w-[400px] mx-auto
+                    md:w-[500px] 
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
                     xl:w-[30vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
 
         <motion.div
@@ -121,8 +124,9 @@ const OurWork = () => {
           <section className="flex justify-between xs:mt-16 xl:mt-20 px-4">
             <div
               className="bg-[#171822] xs:p-2 xl:p-3 relative border-2 border-gray-700 rounded-full
-            xs:w-full
-            sm:w-[85%]
+            xs:w-[350px]
+            sm:w-[400px]
+            md:w-[450px]
             lg:w-[60%]
             xl:w-[45%]"
             >
@@ -176,8 +180,9 @@ const OurWork = () => {
           <section className="flex justify-between xs:mt-16 xl:mt-20 px-4">
             <div
               className="bg-[#171822] xs:p-2 xl:p-3 relative border-2 border-gray-700 rounded-full xs:mx-auto
-            xs:w-full
-            sm:w-[85%]
+            xs:w-[350px]
+            sm:w-[400px]
+            md:w-[450px]
             lg:w-[60%]
             xl:w-[45%]"
             >
@@ -231,8 +236,9 @@ const OurWork = () => {
           <section className="flex justify-between xs:mt-16 xl:mt-20 px-4">
             <div
               className="bg-[#171822] xs:p-2 xl:p-3 relative border-2 border-gray-700 rounded-full ml-auto
-            xs:w-full
-            sm:w-[85%]
+            xs:w-[350px]
+            sm:w-[400px]
+            md:w-[450px]
             lg:w-[60%]
             xl:w-[45%]"
             >

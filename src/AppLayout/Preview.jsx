@@ -215,12 +215,12 @@ const Preview = () => {
 
           <section
             className={`grid justify-between items-start gap-10 text-white 
-    grid-cols-1 
-    ${
-      project.P_Images && project.P_Images.length > 0
-        ? "lg:grid-cols-2"
-        : "lg:grid-cols-1"
-    }`}
+              grid-cols-1 
+              ${
+                project.P_Images && project.P_Images.length > 0
+                  ? "lg:grid-cols-2"
+                  : "lg:grid-cols-1"
+              }`}
           >
             {/* Left Side */}
             <div
@@ -277,7 +277,7 @@ const Preview = () => {
                     className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
                     onClick={() => setSelectedImage(null)}
                   >
-                    <div className="relative w-[90%] h-auto overflow-hidden rounded-2xl shadow-2xl">
+                    <div className="relative w-[80%] h-auto overflow-hidden rounded-none shadow-2xl">
                       <img
                         src={selectedImage}
                         alt="Zoom Preview"

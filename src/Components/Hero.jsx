@@ -4,7 +4,7 @@ import { TiStarFullOutline } from "react-icons/ti";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import bgHero from "../assets/HeroBg.png";
 import Navbar from "../AppLayout/Navbar";
-import hero from "../assets/Hero.png";
+import hero from "../assets/Annus2.png";
 import icon from "../assets/icon.png";
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
     <section
       id="hero"
       style={{ backgroundImage: `url(${bgHero})` }}
-      className="bg-cover bg-center bg-no-repeat text-colortext xs:h-fit lg:h-screen overflow-hidden pt-10 xs:pb-20"
+      className="bg-cover bg-center bg-no-repeat text-colortext xs:h-fit xl:h-screen overflow-hidden pt-6 xs:pb-20"
     >
       <Navbar />
 
@@ -21,7 +21,8 @@ const Hero = () => {
         xs:w-[90%] xs:mt-24 xs:grid-cols-1
         md:w-[80vw] md:mt-22
         lg:grid-cols-2 lg:mt-40
-        xl:w-[1260px]"
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         {/* Left Side */}
         <div className=" xs:order-2 lg:order-1">
@@ -63,7 +64,7 @@ const Hero = () => {
             className="font-outfit mt-5
           xs:text-Paragraph5 xs:text-center
           sm:text-Paragraph4 
-          lg:text-Paragraph5 lg:text-left xl:text-Paragraph3"
+          lg:text-Paragraph5 lg:text-left xl:text-Paragraph5"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
@@ -190,7 +191,7 @@ const Hero = () => {
               <img src={hero} className="absolute xs:w-[70vw] xl:w-auto" />
 
               <motion.div
-                className="bg-white/20 rounded-xl font-outfit absolute z-10
+                className="bg-white/13 rounded-xl font-outfit absolute z-10
         xs:p-2 xs:-top-14 xs:-right-7
         sm:p-3 sm:-top-10 sm:-right-16
         lg:p-3 lg:-top-14 lg:-right-16
@@ -209,7 +210,7 @@ const Hero = () => {
                   <TiStarFullOutline className="text-button xs:text-Paragraph6 text-xl" />
                   <TiStarFullOutline className="text-button xs:text-Paragraph6 text-xl" />
                 </div>
-                <h1 className="font-semibold xs:text-Paragraph5 xs:mt-2 mt-3 text-xl">
+                <h1 className="xs:text-Paragraph5 xs:mt-2 mt-3 text-xl">
                   10+ Years
                 </h1>
                 <p className="xs:text-Paragraph6">Experience</p>

@@ -82,7 +82,8 @@ const Contact = () => {
         className="mx-auto relative z-20
         xs:w-[90%]
         md:w-[80vw]
-        xl:w-[1200px]"
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         {/* Section Heading */}
         <h1

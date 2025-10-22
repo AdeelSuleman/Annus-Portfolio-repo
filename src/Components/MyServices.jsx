@@ -111,8 +111,10 @@ const MyServices = () => {
       <div
         className="mx-auto 
         xs:w-[90%]
-        md:w-[80vw]
-        xl:w-[1260px]"
+        md:w-[95vw]
+        lg:w-[90%]
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         <h1
           ref={headingRef}
@@ -124,24 +126,27 @@ const MyServices = () => {
           <span className="text-colortext">My</span> Services
         </h1>
 
+        {/* Section Sub Heading */}
         <p
           ref={textRef}
           className="text-center font-light font-outfit text-colortext mt-3
                     xs:w-full xs:text-Paragraph6
+                    sm:w-[400px] mx-auto
+                    md:w-[500px]
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
                     xl:w-[30vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
 
         {/* Cards Secction */}
         <section className="">
           <div
             className={`mx-auto mt-8 grid gap-10 justify-center
-                        xs:w-full xs:grid-cols-2
+                        xs:w-[70vw] xs:grid-cols-2
                         sm:w-[65%]
-                        md:w-[90%]
+                        md:w-[600px]
                         lg:w-[80%]
                         xl:w-[70%]
                         ${services.length === 3 ? "md:grid-cols-3" : "md:grid-cols-auto"}`}
@@ -173,9 +178,9 @@ const MyServices = () => {
           {/* Cards Contents */}
           <div
             className="mt-8 grid gap-5 mx-auto
-                xs:grid-cols-1
-                sm:w-[80%]
-                lg:grid-cols-3 
+                xs:grid-cols-1 xs:w-[70vw]
+                md:w-[720px] md:grid-cols-3
+                lg:grid-cols-3 lg:w-full
                 xl:w-[85%]"
           >
             {visibleCards.map((card, idx) => (
@@ -200,11 +205,11 @@ const MyServices = () => {
                   delay: idx % 3 === 1 ? 0.6 : 0,
                   ease: "easeOut",
                 }}
-                className="bg-[#11121E] relative border border-gray-700 rounded-2xl shadow-lg border-b-0 rounded-b-none"
+                className="bg-[#11121E] relative border border-gray-700 rounded-2xl shadow-lg border-b-0"
               >
                 <h1
                   className="text-center py-3 border-0 border-b border-gray-700 font-semibold text-colortext
-                xs:text-Paragraph1 lg:text-Paragraph3 xl:text-Paragraph1"
+                xs:text-Paragraph1 md:text-Paragraph4 lg:text-Paragraph3 xl:text-Paragraph1"
                 >
                   {card.title}
                 </h1>
@@ -213,10 +218,10 @@ const MyServices = () => {
                   <div className="w-[80%] h-[20px] mx-auto rounded-t-xl mt-2 bg-[#1D1E29]"></div>
                   <div className="w-[90%] h-[20px] mx-auto rounded-t-2xl bg-[#5E5E5E]"></div>
                   <div
-                    className="rounded-t-2xl bg-gray-100 overflow-hidden
+                    className="rounded-2xl bg-gray-100 overflow-hidden
                   xs:w-full xs:h-[180px]
                   sm:w-full sm:h-[250px]
-                  md:h-[300px]
+                  md:h-[180px]
                   lg:h-[180px]
                   xl:h-[220px]"
                   >
@@ -228,7 +233,7 @@ const MyServices = () => {
                   </div>
                 </div>
 
-                <div className="bg-[#020312] p-3 rounded-tl-4xl absolute z-10 bottom-[-15px] right-[-15px]">
+                <div className="bg-[#020312] p-4 rounded-tl-[50px] absolute z-10 bottom-[-15px] right-[-15px]">
                   {/* <Link to={card.url}> */}
                   <button
                     onClick={() => {
@@ -238,7 +243,7 @@ const MyServices = () => {
                       );
                       navigate("/projects");
                     }}
-                    className="bg-button cursor-pointer p-2 rounded-full text-colortext text-Heading5"
+                    className="bg-button cursor-pointer p-2 rounded-full text-colortext text-Heading5 hover:bg-[#020312] hover:text-button"
                   >
                     <GoArrowUpRight className="" />
                   </button>

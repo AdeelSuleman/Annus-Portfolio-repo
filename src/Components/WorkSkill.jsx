@@ -203,36 +203,40 @@ const WorkSkill = () => {
         className="mx-auto 
         xs:w-[90%]
         md:w-[80vw]
-        xl:w-[1260px]"
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         <h1
           ref={headingRef}
           className="text-center font-medium font-Manrope text-button
-    xs:text-Heading6
-    lg:text-Heading4
-    xl:text-Heading1"
+            xs:text-Heading6
+            lg:text-Heading4
+            xl:text-Heading1"
         >
           <span className="text-colortext">My Work</span> Skills
         </h1>
 
+        {/* Section Sub Heading */}
         <p
           ref={textRef}
           className="text-center font-light font-outfit text-colortext mt-3
                     xs:w-full xs:text-Paragraph6
+                    sm:w-[400px] mx-auto
+                    md:w-[500px] 
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
                     xl:w-[30vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
 
         {/* Skill Cards */}
         <div
           className="mt-14 grid gap-5
-        xs:grid-cols-1
-        sm:grid-cols-2
-        lg:grid-cols-3
-        xl:grid-cols-4"
+                    xs:grid-cols-1
+                    sm:grid-cols-2
+                    lg:grid-cols-3
+                    xl:grid-cols-5"
         >
           {skills.map((skill, index) => (
             <motion.div
@@ -240,18 +244,20 @@ const WorkSkill = () => {
               initial={{ opacity: 0, y: 50 }} // start: niche aur invisible
               whileInView={{ opacity: 1, y: 0 }} // animate: upar aajaye + visible
               transition={{
-                duration: 0.6,
-                delay: index * 0.3, // ek ek karke delay se aaye
+                duration: 0.3,
+                delay: index * 0.1, // ek ek karke delay se aaye
                 ease: "easeOut",
               }}
-              className="border border-gray-700 py-6 px-8 flex flex-col items-center justify-center rounded-lg shadow-md gap-3"
+              className="border border-gray-700 py-6 px-8 flex flex-col items-center justify-center rounded-lg shadow-md gap-3
+                          xs:w-[70vw] xs:mx-auto
+                          sm:w-full sm:mx-0"
             >
               <img
                 src={skill.pic}
                 alt={skill.name}
                 className="w-12 h-12 mb-3"
               />
-              <h1 className="font-bold text-lg mb-2 text-colortext">
+              <h1 className="font-bold text-lg mb-2 text-colortext text-center">
                 {skill.name}
               </h1>
 

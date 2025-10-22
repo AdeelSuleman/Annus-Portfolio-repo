@@ -80,22 +80,26 @@
     // Custom Code GIF
     import Sofas_GIF from '../assets/Projects/Custom_Code/GIF/Sofas_Gif.gif'
 
-
-
-
-
     // AUTOMATIONS
     // GoHighLevel Automations Benners
-    import QuoteGenerator from '../assets/Automations/GHL_Automation/QuoteGenerator/QuoteGenerator.jpg'
+    import GHL_Gif from '../assets/Automations/GHL_Automation/highlevel.png'
+    import QuoteGenerator from '../assets/Automations/GHL_Automation/QuoteGenerator/QuoteGIF.gif'
+    import SalesPipline_Banner from '../assets/Automations/GHL_Automation/SalesPipeline/SalesPipline.gif'
 
 
 
     // GoHighLevel Automation Pictures
-    import AutoForm from '../assets/Automations/GHL_Automation/QuoteGenerator/form.png'
-    import GhlAuto1 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto1.png'
-    import GhlAuto2 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto2.png'
-    import GhlEmail1 from '../assets/Automations/GHL_Automation/QuoteGenerator/email1.png'
-    import GhlEmail2 from '../assets/Automations/GHL_Automation/QuoteGenerator/email2.png'
+    // QuoteGenerator
+    import Ghl_QG_AutoForm from '../assets/Automations/GHL_Automation/QuoteGenerator/form.jpg'
+    import Ghl_QG_Auto1 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto1.jpg'
+    import Ghl_QG_Auto2 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto2.jpg'
+    import Ghl_QG_Email1 from '../assets/Automations/GHL_Automation/QuoteGenerator/email1.jpg'
+    import Ghl_QG_Email2 from '../assets/Automations/GHL_Automation/QuoteGenerator/email2.jpg'
+    // SalesPipeline
+    import Ghl_SP_Pipline from '../assets/Automations/GHL_Automation/SalesPipeline/Pipline.jpg'
+    import Ghl_SP_GSheet from '../assets/Automations/GHL_Automation/SalesPipeline/GSheet.jpg'
+    import Ghl_SP_GSheet2 from '../assets/Automations/GHL_Automation/SalesPipeline/GSheet2.jpg'
+    import Ghl_SP_Graph from '../assets/Automations/GHL_Automation/SalesPipeline/Graph.jpg'
 
 
     // GoHighLevel Automation Videos
@@ -105,7 +109,27 @@
     import Sales_process from '../assets/Automations/GHL_Automation/SalesPipeline/Sales_process.mp4'
 
 
+    // Pabbly Automations Benners
+    import Pabbly_Gif from '../assets/Automations/Pabbly_Automation/pabbly.png'
 
+
+    // Zapier Automations Benners
+    import Zapier_GIF from '../assets/Automations/Zapier_Automation/Zapier.png'
+    import Zapier_demo from '../assets/Automations/Zapier_Automation/ZapierDemo/zapier_demo.gif'
+    import zapier_Shopify from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/Shopify.gif'
+
+
+    // ZAPIER AUTOMATION PICTURE  
+    // Shopify Google Sheet FTP
+    import zapier_auto from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/auto.jpg'
+    import zapier_code from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/code.jpg'
+    import zapier_GSheet1 from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/GSheet1.jpg'
+    import zapier_GSheet2 from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/GSheet2.jpg'
+
+    // ZAPIER AUTOMATION VIDEOS
+    import zapier_Shopify_GSheet from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/Shopify_GsheetFTP.mp4'
+    import zapier_Demo1 from '../assets/Automations/Zapier_Automation/ZapierDemo/zapier_demo.mp4'
+    import zapier_Demo2 from '../assets/Automations/Zapier_Automation/ZapierDemo/zapier_demo2.mp4'
 
 
     
@@ -481,7 +505,7 @@ export const services = [
                 card_Id: 301,
               title: "Pabbly",
               video: "",
-              img: 'juniper',
+              img: Pabbly_Gif,
               content:
                 "Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.",
               url: "",
@@ -505,24 +529,46 @@ export const services = [
             {
                 card_Id: 302,
               title: "zapier",
-              video: "https://youtu.be/ZhewcLWb5xs?si=n5k4E1ZUrLJKvQPo",
-              img: "",
+              video: "",
+              img: Zapier_GIF,
               content:
                 "Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.",
               url: "",
               projects : [
                 {
                     P_id: 3001,
-                    P_Heading: 'Quote Generator for Event food',
+                    P_Heading: 'Zapier Demo',
                     P_SubHeading: '',
-                    P_Banner: Mike,
+                    P_Banner: Zapier_demo,
                     P_Gif: Mike_GIF,
                     P_Mobile_GIF: '',
-                    P_Url: 'https://app.leadcare.dk/v2/preview/cKXoYcrDE9iM9z4N00vF',
-                    P_Video: [],
+                    P_Url: '',
+                    P_Video: [
+                      zapier_Demo1,
+                      zapier_Demo2,
+                    ],
                     P_Category: 'Automation',
                     P_Images: [
                       
+                    ]
+                },
+                {
+                    P_id: 3002,
+                    P_Heading: 'Shopify FTP Google Sheet',
+                    P_SubHeading: '',
+                    P_Banner: zapier_Shopify,
+                    P_Gif: Mike_GIF,
+                    P_Mobile_GIF: '',
+                    P_Url: '',
+                    P_Video: [
+                      zapier_Shopify_GSheet,
+                    ],
+                    P_Category: 'Automation',
+                    P_Images: [
+                      zapier_auto,
+                      zapier_code,
+                      zapier_GSheet1,
+                      zapier_GSheet2,
                     ]
                 },
               ]
@@ -531,7 +577,7 @@ export const services = [
                 card_Id: 303,
               title: "Go High Level Automations",
               video: "",
-              img: "",
+              img: GHL_Gif,
               content:
                 "Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.",
               url: "",
@@ -549,11 +595,11 @@ export const services = [
                     ],
                     P_Category: 'Automation',
                     P_Images: [
-                      AutoForm,
-                      GhlAuto1,
-                      GhlAuto2,
-                      GhlEmail1,
-                      GhlEmail2
+                      Ghl_QG_AutoForm,
+                      Ghl_QG_Auto1,
+                      Ghl_QG_Auto2,
+                      Ghl_QG_Email1,
+                      Ghl_QG_Email2
                     ]
                 },
                 {
@@ -575,7 +621,7 @@ export const services = [
                     P_id: 3003,
                     P_Heading: 'Sales Pipeline',
                     P_SubHeading: 'Journey + Outbound',
-                    P_Banner: QuoteGenerator,
+                    P_Banner: SalesPipline_Banner,
                     P_Gif: '',
                     P_Mobile_GIF: '',
                     P_Url: '',
@@ -585,6 +631,10 @@ export const services = [
                     ],
                     P_Category: 'Automation',
                     P_Images: [
+                      Ghl_SP_Pipline,
+                      Ghl_SP_GSheet,
+                      Ghl_SP_GSheet2,
+                      Ghl_SP_Graph,
                     ]
                 },
               ]

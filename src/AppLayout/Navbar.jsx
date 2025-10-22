@@ -72,9 +72,10 @@ const Navbar = () => {
     <>
       <nav
         className="bg-white mx-auto flex justify-between items-center gap-5 rounded-full shadow-lg shadow-gray-600
-        xs:w-[90%] xs:py-2 xs:px-4
-        md:w-[80vw] md:px-6
-        xl:w-[1280px]"
+        xs:w-[90%] xs:py-1 xs:px-2
+        md:w-[80vw]
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         {/* Logo Section */}
         <Link to="/" className="">
@@ -83,7 +84,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul
-          className="text-colorDark flex justify-between items-center gap-10 font-semibold xs:text-size-text xl:text-[22px]
+          className="text-colorDark flex justify-between items-center gap-10 font-semibold text-Paragraph5
             xs:hidden lg:inline-flex"
         >
           {navigation.map((navi, i) => (
@@ -101,7 +102,7 @@ const Navbar = () => {
         <div className="text-colortext xs:hidden lg:inline-flex">
           <button
             onClick={() => handleNavClick("contact")}
-            className="flex items-center justify-center gap-3 bg-button px-6 py-3 font-semibold xs:text-size-text xl:text-[20px] rounded-full cursor-pointer"
+            className="flex items-center justify-center gap-3 bg-button px-6 py-3 font-semibold text-Paragraph5 rounded-full cursor-pointer"
           >
             <span>Let's Talks</span>
             <FaArrowRightFromBracket className="text-xl" />

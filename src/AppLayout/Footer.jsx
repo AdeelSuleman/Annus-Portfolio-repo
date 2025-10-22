@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/AnnusLogo1.png";
 import { Link } from "react-router-dom";
 
@@ -78,13 +78,39 @@ const Footer = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+
+
+    const [footerData, setFooterData] = useState({
+    developerName: "",
+    developerLink: ""
+  });
+
+  useEffect(() => {
+    const fetchFooterData = async () => {
+      try {
+        const res = await fetch(
+          "	https://jsonkeeper.com/b/MXOU2",
+          { cache: "no-store" }
+        );
+        const data = await res.json();
+        setFooterData(data);
+      } catch (error) {
+        console.error("Footer data load failed:", error);
+      }
+    };
+
+    fetchFooterData();
+  }, []);
+
   return (
     <footer className="pt-20">
       <div
         className="mx-auto
         xs:w-[90%]
         md:w-[80vw]
-        xl:w-[1280px]"
+        xl:w-[90vw]
+        2xl:w-[1280px]"
       >
         <section
           className="grid gap-5 items-start
@@ -176,9 +202,20 @@ const Footer = () => {
           
         </section>
 
-        <footer className="py-5 border-0 border-t border-gray-600 mt-5">
-          <p className="text-center text-colortext">Copyright © {new Date().getFullYear()} Developer. All rights reserved.</p>
-        </footer>
+       <footer className="py-5 border-0 border-t border-gray-600 mt-5">
+      <p className="text-center text-colortext">
+        Copyright © {new Date().getFullYear()}{" "}
+        <a
+          href={footerData.developerLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gradient font-semibold "
+        >
+          {footerData.developerName || "Developer"}
+        </a>{" "}
+        . All rights reserved.
+      </p>
+    </footer>
       </div>
     </footer>
   );
