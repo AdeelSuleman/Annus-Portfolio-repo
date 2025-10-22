@@ -14,7 +14,7 @@ import client from '../assets/Testimonials/client.jpg'
 
 // Reviews
 import tiffineaReview from '../assets/Testimonials/TiffineaReview.png'
-import jamilaReview from '../assets/Testimonials/jamilaReview.mp4'
+import jamilaReview from '../assets/Testimonials/jamilaReview.MP4'
 import clientReview from '../assets/Testimonials/clientReview.png'
 
 
