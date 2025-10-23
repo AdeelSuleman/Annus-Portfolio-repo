@@ -138,14 +138,14 @@ const Testimonials = () => {
         {/* Section Sub Heading */}
         <p
           ref={textRef}
-          className="text-center font-light font-outfit text-colortext mt-3 
+          className="text-center font-light font-outfit text-colortext mt-3
                     xs:w-full xs:text-Paragraph6
                     sm:w-[400px] mx-auto
-                    md:w-[500px] 
+                    md:w-[500px]
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
-                    xl:w-[30vw] xl:text-Paragraph4"
+                    xl:w-[40vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
 

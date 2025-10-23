@@ -192,7 +192,7 @@ const Hero = () => {
 
               <motion.div
                 className="bg-white/13 rounded-xl font-outfit absolute z-10
-        xs:p-2 xs:-top-14 xs:-right-7
+        xs:p-2 xs:-top-10 xs:-right-3
         sm:p-3 sm:-top-10 sm:-right-16
         lg:p-3 lg:-top-14 lg:-right-16
         xl:p-3 xl:-top-8 xl:-right-5 "

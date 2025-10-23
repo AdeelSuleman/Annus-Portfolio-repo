@@ -134,19 +134,19 @@ const MyServices = () => {
                     sm:w-[400px] mx-auto
                     md:w-[500px]
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
-                    xl:w-[30vw] xl:text-Paragraph4"
+                    xl:w-[40vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
 
         {/* Cards Secction */}
         <section className="">
           <div
-            className={`mx-auto mt-8 grid gap-10 justify-center
-                        xs:w-[70vw] xs:grid-cols-2
+            className={`mx-auto mt-8 grid  justify-center 
+                        xs:w-[80vw] xs:grid-cols-2 xs:gap-3
                         sm:w-[65%]
-                        md:w-[600px]
+                        md:w-[600px] md:gap-10
                         lg:w-[80%]
                         xl:w-[70%]
                         ${services.length === 3 ? "md:grid-cols-3" : "md:grid-cols-auto"}`}

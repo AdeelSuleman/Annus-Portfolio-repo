@@ -55,11 +55,11 @@ export const HeroPortfolio = () => {
       baseWidth = 295;
       baseHeight = 35;
     } else if (screenWidth <= 640) {
-      baseWidth = 350;
+      baseWidth = 450;
       baseHeight = 45;
     } else if (screenWidth <= 768) {
-      baseWidth = 450;
-      baseHeight = 50;
+      baseWidth = 550;
+      baseHeight = 45;
     } else if (screenWidth <= 1024) {
       baseWidth = 600;
       baseHeight = 55;
@@ -163,7 +163,7 @@ export const HeroPortfolio = () => {
           className="absolute cursor-pointer lg:border border-gray-500 lg:shadow-xl shadow-gray-900 rounded-lg "
           style={{
             backgroundImage: `url(${src})`,
-            backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
+            backgroundSize: window.innerWidth <= 1023 ? "contain" : "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
@@ -181,10 +181,11 @@ export const HeroPortfolio = () => {
         >
          {/* 👇 Image Title on Top Center */}
     <div
-      className="absolute top-3 left-3
-                 text-white text-left font-semibold 
-                 xs:text-sm sm:text-base md:text-lg 
-                 bg-black/50 px-3 py-1 rounded-lg shadow-lg"
+      className="absolute text-white text-left font-semibold bg-black/50 px-3 py-1 rounded-lg shadow-lg
+                 xs:text-sm xs:top-28 xs:left-0
+                 sm:text-base sm:top-20
+                 md:text-lg md:top-22
+                 lg:top-2 lg:left-3"
     >
       <h1 className="">
       {selectedCard?.projects?.[i]?.P_Heading || `Project ${i + 1}`}

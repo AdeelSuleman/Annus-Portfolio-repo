@@ -222,18 +222,18 @@ const SkillsWorks = () => {
           className="text-center font-light font-outfit text-colortext mt-3
                     xs:w-full xs:text-Paragraph6
                     sm:w-[400px] mx-auto
-                    md:w-[500px] 
+                    md:w-[500px]
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
-                    xl:w-[30vw] xl:text-Paragraph4"
+                    xl:w-[40vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
 
         {/* Skill Cards */}
         <div
           className="mt-14 grid gap-5
-                    xs:grid-cols-1
+                    xs:grid-cols-2
                     sm:grid-cols-2
                     lg:grid-cols-3
                     xl:grid-cols-5"
@@ -249,15 +249,15 @@ const SkillsWorks = () => {
                 ease: "easeOut",
               }}
               className="border border-gray-700 py-6 px-8 flex flex-col items-center justify-center rounded-lg shadow-md gap-3
-                          xs:w-[70vw] xs:mx-auto
-                          sm:w-full sm:mx-0"
+                          xs:py-4 xs:px-4
+                          sm:w-full sm:mx-0 sm:py-6 sm:px-8"
             >
               <img
                 src={skill.pic}
                 alt={skill.name}
                 className="w-12 h-12 mb-3"
               />
-              <h1 className="font-bold text-lg mb-2 text-colortext text-center">
+              <h1 className="font-bold xs:text-Paragraph6 sm:text-lg mb-2 text-colortext text-center">
                 {skill.name}
               </h1>
 
