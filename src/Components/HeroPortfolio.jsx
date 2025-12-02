@@ -51,8 +51,8 @@ export const HeroPortfolio = () => {
     const screenWidth = window.innerWidth;
     let baseWidth, baseHeight;
 
-    if (screenWidth <= 375) {
-      baseWidth = 295;
+    if (screenWidth <= 500) {
+      baseWidth = 300;
       baseHeight = 35;
     } else if (screenWidth <= 640) {
       baseWidth = 450;
@@ -91,7 +91,7 @@ export const HeroPortfolio = () => {
 
       let height = baseHeight - absOffset * 5;
       if (height < 30) height = 30;
-      let width = absOffset === 0 ? baseWidth : baseWidth * 0.4;
+      let width = absOffset === 0 ? baseWidth : baseWidth * 0.5;
       let zIndex = 10 - absOffset;
 
       gsap.to(slide, {
@@ -128,12 +128,12 @@ export const HeroPortfolio = () => {
   
 
   return (
-    <section className="">
+    <section className="w-full">
       <h1 ref={headingRef}
-        className="hero-text text-white text-center xs:text-2xl lg:text-5xl font-bold mt-6">
+        className="hero-text text-white text-center xs:text-2xl lg:text-5xl font-bold my-6">
       {selectedCard?.title || ""}
     </h1>
-      <div className="relative w-full xs:h-[40vh] md:h-[60vh] lg:h-[70vh] xl:h-[85vh] flex justify-center items-center overflow-hidden">
+      <div className="relative w-full xs:h-[40vh] md:h-[60vh] lg:h-[70vh] xl:h-[85vh] 2xl:h-[750px] flex justify-center items-center overflow-hidden ">
          <div className="relative flex justify-center items-center w-full">
           <div className="relative  w-[100%] h-[80vh] p-1">
             
@@ -182,15 +182,15 @@ export const HeroPortfolio = () => {
          {/* 👇 Image Title on Top Center */}
     <div
       className="absolute text-white text-left font-semibold bg-black/50 px-3 py-1 rounded-lg shadow-lg
-                 xs:text-sm xs:top-28 xs:left-0
+                 xs:text-sm xs:top-16 xs:left-0
                  sm:text-base sm:top-20
                  md:text-lg md:top-22
                  lg:top-2 lg:left-3"
     >
-      <h1 className="">
+      <h1 className="capitalize">
       {selectedCard?.projects?.[i]?.P_Heading || `Project ${i + 1}`}
       </h1>
-      <h3 className="xs:text-sm sm:text-base">
+      <h3 className="xs:text-sm sm:text-base capitalize">
         {selectedCard?.projects?.[i]?.P_SubHeading || ``}
         </h3>
     </div>

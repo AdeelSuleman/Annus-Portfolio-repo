@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import heroImg from "../assets/workSkill/concept.jpg";
+import heroImg from "../assets/WorkProcess/banner.webp";
 
 const Contact = () => {
   // Section Heading Animation
@@ -86,15 +86,24 @@ const Contact = () => {
         2xl:w-[1280px]"
       >
         {/* Section Heading */}
-        <h1
-          ref={headingRef}
-          className="text-left font-medium font-Manrope text-colortext
-    xs:text-Heading5
-    lg:text-Heading4
-    xl:text-Heading1"
-        >
-          Let's make your <br className="xs:inline sm:hidden"/> brand brilliant!
-        </h1>
+        <div>
+          <h1
+            ref={headingRef}
+            className="text-left font-medium font-Manrope text-colortext
+                xs:text-Heading5
+                lg:text-Heading4
+                xl:text-Heading1"
+          >
+            Ready to Bring Your Vision to Life? 
+            <br className="xs:hidden sm:inline"/> Let's Start the Conversation
+          </h1>
+          <p className="font-outfit text-colortext mt-4
+            xs:text-Paragraph5
+            lg:text-Paragraph4
+            xl:text-Paragraph5">
+            Have a project in mind? I'm here to help you create something extraordinary. Fill out the form below, and let's discuss how we can transform your ideas into a stunning digital experience that drives results.
+          </p>
+        </div>
 
         <form ref={form} onSubmit={sendEmail} className="mt-10">
           {/* <label>Name</label> */}

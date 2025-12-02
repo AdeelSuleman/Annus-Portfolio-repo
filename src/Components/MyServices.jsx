@@ -1,44 +1,31 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { services as servicesData } from "../Data/ServiceData";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const MyServices = () => {
-  const [services, setServices] = useState([]);
-  const [activeService, setActiveService] = useState(null);
+  const [activeService, setActiveService] = useState(servicesData[0]);
   const [showAll, setShowAll] = useState(false);
 
-  // useEffect(() => {
-  //   const storedData = localStorage.getItem("servicesData");
-  //   if (storedData) {
-  //     const parsed = JSON.parse(storedData);
-  //     setServices(parsed);
-  //     setActiveService(parsed[0]); // default: pehla service active
-  //   }
-  // }, []);
-
-  useEffect(() => {
-  setServices(servicesData);
-  setActiveService(servicesData[0]); // default active
-}, []);
-
-  // show more button
-  const cardsPerRow = 3;
-
-  const visibleCards = showAll
-    ? activeService?.cards || []
-    : activeService?.cards?.slice(0, cardsPerRow) || [];
-
-  // component ke andar
   const navigate = useNavigate();
 
-  // Section Heading Animation
+  // ------------------------------------------------------------
+  // 1️⃣ Use Memo for computed visible cards (Performance Boost)
+  // ------------------------------------------------------------
+  const visibleCards = useMemo(() => {
+    const cards = activeService?.cards || [];
+    return showAll ? cards : cards.slice(0, 3);
+  }, [activeService, showAll]);
+
+  // ------------------------------------------------------------
+  // 2️⃣ Heading Animation (optimized cleanup)
+  // ------------------------------------------------------------
   const headingRef = useRef(null);
   const splitRef = useRef(null);
   const animationRef = useRef(null);
@@ -77,9 +64,11 @@ const MyServices = () => {
     };
   }, []);
 
-  // section text animtion
+  // ------------------------------------------------------------
+  // 3️⃣ Sub-Text Animation (optimized clean animation)
+  // ------------------------------------------------------------
   const textRef = useRef(null);
-
+  
   useEffect(() => {
     let split = new SplitText(textRef.current, { type: "lines" });
 
@@ -107,167 +96,116 @@ const MyServices = () => {
   }, []);
 
   return (
-    <section id="Myservices" className="bg-[#020312] py-24 ">
-      <div
-        className="mx-auto 
-        xs:w-[90%]
-        md:w-[95vw]
-        lg:w-[90%]
-        xl:w-[90vw]
-        2xl:w-[1280px]"
-      >
+    <section id="Myservices" className="bg-[#020312] py-24">
+      <div className="mx-auto xs:w-[90%] md:w-[95vw] lg:w-[90%] xl:w-[90vw] 2xl:w-[1280px]">
+        
+        {/* Heading */}
         <h1
           ref={headingRef}
-          className="text-center font-medium font-Manrope text-button
-            xs:text-Heading6
-            lg:text-Heading4
-            xl:text-Heading1"
+          className="text-center font-Manrope font-medium text-button
+            xs:text-Heading6 lg:text-Heading4 xl:text-Heading1"
         >
           <span className="text-colortext">My</span> Services
         </h1>
 
-        {/* Section Sub Heading */}
+        {/* Sub Heading */}
         <p
           ref={textRef}
-          className="text-center font-light font-outfit text-colortext mt-3
-                    xs:w-full xs:text-Paragraph6
-                    sm:w-[400px] mx-auto
-                    md:w-[500px]
-                    lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
-                    xl:w-[40vw] xl:text-Paragraph4"
+          className="text-center font-outfit font-light text-colortext mt-3
+            xs:text-Paragraph6
+            sm:w-[400px] mx-auto
+            md:w-[500px]
+            lg:w-[50vw] xl:w-[40vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          I offer complete digital solutions designed to help your business grow, increase conversions, and improve customer experience.
         </p>
 
-        {/* Cards Secction */}
-        <section className="">
-          <div
-            className={`mx-auto mt-8 grid  justify-center 
-                        xs:w-[80vw] xs:grid-cols-2 xs:gap-3
-                        sm:w-[65%]
-                        md:w-[600px] md:gap-10
-                        lg:w-[80%]
-                        xl:w-[70%]
-                        ${services.length === 3 ? "md:grid-cols-3" : "md:grid-cols-auto"}`}
-          >
-            {services.map((service, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  setActiveService(service);
-                  setShowAll(false);
-                }}
-                className={`px-5 xs:py-2 lg:py-3 rounded-full font-Manrope font-semibold transition-all duration-300 cursor-pointer
-                    ${
-                      activeService?.id === service.id
-                        ? "bg-transparent border-2 border-button text-button scale-105"
-                        : "bg-[#151729] text-colortext hover:bg-button border-2 border-[#151729]"
-                    }
-                    ${
-                      services.length === 3 && i === 2
-                        ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-auto"
-                        : ""
-                    }`}
-              >
-                {service.name}
-              </button>
-            ))}
-          </div>
+        {/* Service Tabs */}
+        <div
+          className={`mx-auto mt-8 grid xs:w-[80vw] xs:grid-cols-2 xs:gap-3 sm:w-[65%]
+              md:w-[600px] md:gap-10 lg:w-[80%] xl:w-[70%] md:grid-cols-auto`}
+        >
+          {servicesData.map((service) => (
+            <button
+              key={service.id}
+              onClick={() => {
+                setActiveService(service);
+                setShowAll(false);
+              }}
+              className={`px-0 xs:py-2 lg:py-3 rounded-full font-Manrope font-semibold transition-all duration-300 cursor-pointer
+                ${
+                  activeService.id === service.id
+                    ? "bg-transparent border-2 border-button text-button scale-105 active:border-button focus:border-button"
+                    : "bg-[#151729] text-colortext hover:bg-button border-2 border-[#151729] active:border-button focus:border-button"
+                }`}
+            >
+              {service.name}
+            </button>
+          ))}
+        </div>
 
-          {/* Cards Contents */}
-          <div
-            className="mt-8 grid gap-5 mx-auto
-                xs:grid-cols-1 xs:w-[70vw]
-                md:w-[720px] md:grid-cols-3
-                lg:grid-cols-3 lg:w-full
-                xl:w-[85%]"
-          >
-            {visibleCards.map((card, idx) => (
-              <motion.div
-                key={idx}
-                initial={
-                  idx % 3 === 0
-                    ? { x: 250, opacity: 0 } // Left
-                    : idx % 3 === 1
-                    ? { opacity: 0, scale: 0.9 } // Center
-                    : { x: -250, opacity: 0 } // Right
-                }
-                whileInView={
-                  idx % 3 === 0
-                    ? { x: 0, opacity: 1 }
-                    : idx % 3 === 1
-                    ? { opacity: 1, scale: 1 }
-                    : { x: 0, opacity: 1 }
-                }
-                transition={{
-                  duration: 0.8,
-                  delay: idx % 3 === 1 ? 0.6 : 0,
-                  ease: "easeOut",
-                }}
-                className="bg-[#11121E] relative border border-gray-700 rounded-2xl shadow-lg border-b-0"
-              >
-                <h1
-                  className="text-center py-3 border-0 border-b border-gray-700 font-semibold text-colortext
-                xs:text-Paragraph1 md:text-Paragraph4 lg:text-Paragraph3 xl:text-Paragraph1"
+        {/* Cards */}
+        <div
+          className="mt-8 grid gap-5 mx-auto
+            xs:grid-cols-1 xs:w-[70vw]
+            md:w-[720px] md:grid-cols-3
+            lg:grid-cols-3 xl:w-[85%]"
+        >
+          {visibleCards.map((card, idx) => (
+            <motion.div
+              key={idx}
+              initial={{
+                x: idx % 3 === 0 ? 150 : idx % 3 === 2 ? -150 : 0,
+                opacity: 0,
+                scale: idx % 3 === 1 ? 0.9 : 1,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="bg-[#11121E] border border-gray-700 rounded-2xl shadow-lg relative"
+            >
+              <h1 className="text-center py-3 border-b border-gray-700 font-semibold text-colortext xs:text-Paragraph1 xl:text-Paragraph1 p-2">
+                {card.title}
+              </h1>
+
+              <div className="mt-4">
+                <div className="w-[80%] mx-auto h-[20px] bg-[#1D1E29] rounded-t-xl" />
+                <div className="w-[90%] mx-auto h-[20px] bg-gray-600 rounded-t-2xl" />
+                <div className="rounded-2xl bg-gray-100 overflow-hidden xs:h-[180px] sm:h-[250px] md:h-[180px] xl:h-[220px]">
+                  <img src={card.img} className="w-full h-full object-cover" />
+                </div>
+              </div>
+
+              {/* Button */}
+              <div className="bg-[#020312] p-4 rounded-tl-[50px] absolute z-10 bottom-[-15px] right-[-15px]">
+                <button
+                  onClick={() => {
+                    localStorage.setItem("selectedCard", JSON.stringify(card));
+                    navigate("/projects");
+                  }}
+                  className="bg-button cursor-pointer p-2 rounded-full text-colortext text-Heading5 hover:bg-[#020312] hover:text-button"
                 >
-                  {card.title}
-                </h1>
+                  <GoArrowUpRight />
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
-                <div className="mt-4">
-                  <div className="w-[80%] h-[20px] mx-auto rounded-t-xl mt-2 bg-[#1D1E29]"></div>
-                  <div className="w-[90%] h-[20px] mx-auto rounded-t-2xl bg-[#5E5E5E]"></div>
-                  <div
-                    className="rounded-2xl bg-gray-100 overflow-hidden
-                  xs:w-full xs:h-[180px]
-                  sm:w-full sm:h-[250px]
-                  md:h-[180px]
-                  lg:h-[180px]
-                  xl:h-[220px]"
-                  >
-                    <img
-                      src={card.img}
-                      alt={card.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-[#020312] p-4 rounded-tl-[50px] absolute z-10 bottom-[-15px] right-[-15px]">
-                  {/* <Link to={card.url}> */}
-                  <button
-                    onClick={() => {
-                      localStorage.setItem(
-                        "selectedCard",
-                        JSON.stringify(card)
-                      );
-                      navigate("/projects");
-                    }}
-                    className="bg-button cursor-pointer p-2 rounded-full text-colortext text-Heading5 hover:bg-[#020312] hover:text-button"
-                  >
-                    <GoArrowUpRight className="" />
-                  </button>
-                  {/* </Link> */}
-                </div>
-              </motion.div>
-            ))}
+        {/* Show More */}
+        {activeService?.cards?.length > 3 && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-3 text-button font-semibold font-outfit rounded-full border-2 border-button hover:bg-button hover:text-colortext cursor-pointer"
+            >
+              {showAll ? "Hide" : "Show More"}
+            </button>
           </div>
-          {/* Show More/Hide button */}
-          {activeService?.cards?.length > cardsPerRow && (
-            <div className="flex justify-center mt-10">
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="flex justify-center items-center font-semibold font-outfit rounded-full transition-all duration-300 cursor-pointer text-button border-2 border-button
-                                xs:px-6 xs:py-3 xs:gap-2 xs:text-Paragraph6
-                                lg:px-4 lg:py-2 lg:gap-1 lg:text-[14px]
-                                xl:px-8 xl:py-3 xl:gap-2 xl:text-Paragraph6
-                                hover:bg-button hover:text-colortext"
-              >
-                {showAll ? "Hide" : "Show More"}
-              </button>
-            </div>
-          )}
-        </section>
+        )}
       </div>
     </section>
   );

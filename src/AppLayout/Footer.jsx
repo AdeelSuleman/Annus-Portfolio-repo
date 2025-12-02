@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/AnnusLogo1.png";
+import logo from "../assets/AnnusLogo1.webp";
 import { Link } from "react-router-dom";
 
 // Navigation Icons
@@ -209,9 +209,9 @@ const Footer = () => {
           href={footerData.developerLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gradient font-semibold "
+          className="text-gradient font-semibold"
         >
-          {footerData.developerName || "Developer"}
+          {footerData.developerName || "Developer"} 
         </a>{" "}
         . All rights reserved.
       </p>

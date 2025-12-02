@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import heroImg from "../assets/workSkill/concept.jpg";
-import icon1 from "../assets/WorkProcess/Icon1.png";
-import icon2 from "../assets/WorkProcess/Icon2.png";
-import icon3 from "../assets/WorkProcess/Icon3.png";
+import heroImg from "../assets/WorkProcess/banner.webp";
+import icon1 from "../assets/WorkProcess/Icon1.webp";
+import icon2 from "../assets/WorkProcess/Icon2.webp";
+import icon3 from "../assets/WorkProcess/Icon3.webp";
 
 const OurWork = () => {
   // Section Heading Animation
@@ -48,7 +48,7 @@ const OurWork = () => {
     };
   }, []);
 
-  // section text animtion
+  // // section text animtion
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -108,8 +108,7 @@ const OurWork = () => {
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
                     xl:w-[40vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          We follow a clear, structured, and efficient workflow to ensure every project is delivered with precision, quality, and complete transparency. Each step is designed to keep you informed while guaranteeing smooth execution from start to finish.
         </p>
 
         <motion.div
@@ -169,8 +168,7 @@ const OurWork = () => {
                         sm:text-[14px]
                         xl:text-Paragraph6"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                  elit tellus, luctus nec
+                  We start by understanding your goals to define a clear project direction.
                 </p>
               </div>
             </div>
@@ -202,7 +200,7 @@ const OurWork = () => {
                         xl:top-6 xl:left-5"
               >
                 <h1 className="text-center">STEP</h1>
-                <h1 className="text-center">01</h1>
+                <h1 className="text-center">02</h1>
               </div>
 
               <div
@@ -216,7 +214,7 @@ const OurWork = () => {
                         sm:text-Paragraph4
                         xl:text-Paragraph2"
                 >
-                  Concept
+                  Strategy
                 </h1>
 
                 <p
@@ -225,8 +223,7 @@ const OurWork = () => {
                         sm:text-[14px]
                         xl:text-Paragraph6"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                  elit tellus, luctus nec
+                  We create a structured plan that guides the design, development, and overall workflow.
                 </p>
               </div>
             </div>
@@ -258,7 +255,7 @@ const OurWork = () => {
                         xl:top-6 xl:left-5"
               >
                 <h1 className="text-center">STEP</h1>
-                <h1 className="text-center">01</h1>
+                <h1 className="text-center">03</h1>
               </div>
 
               <div
@@ -272,7 +269,7 @@ const OurWork = () => {
                         sm:text-Paragraph4
                         xl:text-Paragraph2"
                 >
-                  Concept
+                  Execution
                 </h1>
 
                 <p
@@ -281,8 +278,7 @@ const OurWork = () => {
                         sm:text-[14px]
                         xl:text-Paragraph6"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                  elit tellus, luctus nec
+                  We build and refine the project with clean code, optimized performance, and precise detail.
                 </p>
               </div>
             </div>

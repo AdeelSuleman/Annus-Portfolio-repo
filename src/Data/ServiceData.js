@@ -1,27 +1,27 @@
     // Go High Level Projects Banners
-    import ghlBanner from '../assets/Projects/GoHighLevel/GhlMockup.jpg'
-    import Mike from '../assets/Projects/GoHighLevel/Benners/Dr_Mike.jpg'
-    import Adjuster from '../assets/Projects/GoHighLevel/Benners/Adjuster.png'
-    import Adventure from '../assets/Projects/GoHighLevel/Benners/AdventureRetreats.jpg'
-    import Agents from '../assets/Projects/GoHighLevel/Benners/Agents.png'
-    import MindFul from '../assets/Projects/GoHighLevel/Benners/MindFul.jpg'
-    import Avillis from '../assets/Projects/GoHighLevel/Benners/Avillis.png'
-    import Dominion from '../assets/Projects/GoHighLevel/Benners/Dominion.png'
-    import E2Winc from '../assets/Projects/GoHighLevel/Benners/E2Winc.jpg'
-    import Echelon from '../assets/Projects/GoHighLevel/Benners/Echelon.png'
-    import FreshBoliun from '../assets/Projects/GoHighLevel/Benners/FreshBoliun.jpg'
-    import HealthyStart from '../assets/Projects/GoHighLevel/Benners/HealthyStart.jpg'
-    import Inner from '../assets/Projects/GoHighLevel/Benners/inner.jpg'
-    import liveWell from '../assets/Projects/GoHighLevel/Benners/liveWell.jpg'
-    import MaryumSharif from '../assets/Projects/GoHighLevel/Benners/MariyumSharif.jpg'
-    import Marriage from '../assets/Projects/GoHighLevel/Benners/Marriage.jpg'
-    import Match from '../assets/Projects/GoHighLevel/Benners/Match.png'
-    import Melaine from '../assets/Projects/GoHighLevel/Benners/Melaine.jpg'
-    import MulchRecycling from '../assets/Projects/GoHighLevel/Benners/MulchRecycling.jpg'
-    import Olivia from '../assets/Projects/GoHighLevel/Benners/Olivia.jpg'
-    import RehabRoom from '../assets/Projects/GoHighLevel/Benners/RehabRoom.jpg'
-    import Rwc from '../assets/Projects/GoHighLevel/Benners/RWC.png'
-    import ParttProject from '../assets/Projects/GoHighLevel/Benners/ParttProject.jpg'
+    import ghlBanner from '../assets/Projects/GoHighLevel/GhlMockup.webp'
+    import Mike from '../assets/Projects/GoHighLevel/Benners/Dr_Mike.webp'
+    import Adjuster from '../assets/Projects/GoHighLevel/Benners/Adjuster.webp'
+    import Adventure from '../assets/Projects/GoHighLevel/Benners/AdventureRetreats.webp'
+    import Agents from '../assets/Projects/GoHighLevel/Benners/Agents.webp'
+    import MindFul from '../assets/Projects/GoHighLevel/Benners/MindFul.webp'
+    import Avillis from '../assets/Projects/GoHighLevel/Benners/Avillis.webp'
+    import Dominion from '../assets/Projects/GoHighLevel/Benners/Dominion.webp'
+    import E2Winc from '../assets/Projects/GoHighLevel/Benners/E2Winc.webp'
+    import Echelon from '../assets/Projects/GoHighLevel/Benners/Echelon.webp'
+    import FreshBoliun from '../assets/Projects/GoHighLevel/Benners/FreshBoliun.webp'
+    import HealthyStart from '../assets/Projects/GoHighLevel/Benners/HealthyStart.webp'
+    import Inner from '../assets/Projects/GoHighLevel/Benners/inner.webp'
+    import liveWell from '../assets/Projects/GoHighLevel/Benners/liveWell.webp'
+    import MaryumSharif from '../assets/Projects/GoHighLevel/Benners/MariyumSharif.webp'
+    import Marriage from '../assets/Projects/GoHighLevel/Benners/Marriage.webp'
+    import Match from '../assets/Projects/GoHighLevel/Benners/Match.webp'
+    import Melaine from '../assets/Projects/GoHighLevel/Benners/Melaine.webp'
+    import MulchRecycling from '../assets/Projects/GoHighLevel/Benners/MulchRecycling.webp'
+    import Olivia from '../assets/Projects/GoHighLevel/Benners/Olivia.webp'
+    import RehabRoom from '../assets/Projects/GoHighLevel/Benners/RehabRoom.webp'
+    import Rwc from '../assets/Projects/GoHighLevel/Benners/RWC.webp'
+    import ParttProject from '../assets/Projects/GoHighLevel/Benners/ParttProject.webp'
 
     // Projects GIF
     import Mike_GIF from '../assets/Projects/GoHighLevel/GIF/Dr_mike_Gif.gif'
@@ -48,10 +48,10 @@
     import Partt_GIF from '../assets/Projects/GoHighLevel/GIF/Partt_GIF.gif'
 
     // Wordpress Benners
-    import Wordpress from '../assets/Projects/WordPress/Wordpress.jpg'
-    import TimeShop from '../assets/Projects/WordPress/Benners/TimeShop.jpg'
-    import Fyp from '../assets/Projects/WordPress/Benners/FYP.jpg'
-    import porfolioWealth from '../assets/Projects/WordPress/Benners/PortfolioWealth.jpg'
+    import Wordpress from '../assets/Projects/WordPress/Wordpress.webp'
+    import TimeShop from '../assets/Projects/WordPress/Benners/TimeShop.webp'
+    import Fyp from '../assets/Projects/WordPress/Benners/FYP.webp'
+    import porfolioWealth from '../assets/Projects/WordPress/Benners/PortfolioWealth.webp'
 
     // Wordpress GIF
     import TimeShop_GIF from '../assets/Projects/WordPress/GIF/TimeGIF.gif'
@@ -62,9 +62,9 @@
     import Portfolio_Mobile_GIF from '../assets/Projects/WordPress/GIF/Portfolio_Mobile_GIF.gif'
 
     // Square Space Benners
-    import SquareSpace from '../assets/Projects/Square_Space/SquareSpace.jpg'
-    import juniper from '../assets/Projects/Square_Space/Benners/juniper.jpg'
-    import Solji from '../assets/Projects/Square_Space/Benners/SoljiNutrition.jpg'
+    import SquareSpace from '../assets/Projects/Square_Space/SquareSpace.webp'
+    import juniper from '../assets/Projects/Square_Space/Benners/juniper.webp'
+    import Solji from '../assets/Projects/Square_Space/Benners/SoljiNutrition.webp'
 
     // Square Space GIF
     import Juniper_GIF from '../assets/Projects/Square_Space/GIF/Juniper_gif.gif'
@@ -74,7 +74,7 @@
 
 
     // Custom Code Benners
-    import Sofa from '../assets/Projects/Custom_Code/Benners/Sofas.jpg'
+    import Sofa from '../assets/Projects/Custom_Code/Benners/Sofas.webp'
 
 
     // Custom Code GIF
@@ -82,25 +82,25 @@
 
     // AUTOMATIONS
     // GoHighLevel Automations Benners
-    import GHL_Gif from '../assets/Automations/GHL_Automation/highlevel.png'
+    import GHL_Gif from '../assets/Automations/GHL_Automation/highlevel.webp'
     import QuoteGenerator from '../assets/Automations/GHL_Automation/QuoteGenerator/QuoteGIF.gif'
     import SalesPipline_Banner from '../assets/Automations/GHL_Automation/SalesPipeline/SalesPipline.gif'
-    import Pipline_Banner from '../assets/Automations/GHL_Automation/PipelineAutomation/Automation1.jpg'
+    import Pipline_Banner from '../assets/Automations/GHL_Automation/PipelineAutomation/Automation1.webp'
 
 
 
     // GoHighLevel Automation Pictures
     // QuoteGenerator
-    import Ghl_QG_AutoForm from '../assets/Automations/GHL_Automation/QuoteGenerator/Form.jpg'
-    import Ghl_QG_Auto1 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto1.jpg'
-    import Ghl_QG_Auto2 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto2.jpg'
-    import Ghl_QG_Email1 from '../assets/Automations/GHL_Automation/QuoteGenerator/email1.jpg'
-    import Ghl_QG_Email2 from '../assets/Automations/GHL_Automation/QuoteGenerator/email2.jpg'
+    import Ghl_QG_AutoForm from '../assets/Automations/GHL_Automation/QuoteGenerator/Form.webp'
+    import Ghl_QG_Auto1 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto1.webp'
+    import Ghl_QG_Auto2 from '../assets/Automations/GHL_Automation/QuoteGenerator/auto2.webp'
+    import Ghl_QG_Email1 from '../assets/Automations/GHL_Automation/QuoteGenerator/email1.webp'
+    import Ghl_QG_Email2 from '../assets/Automations/GHL_Automation/QuoteGenerator/email2.webp'
     // SalesPipeline
-    import Ghl_SP_Pipline from '../assets/Automations/GHL_Automation/SalesPipeline/Pipline.jpg'
-    import Ghl_SP_GSheet from '../assets/Automations/GHL_Automation/SalesPipeline/GSheet.jpg'
-    import Ghl_SP_GSheet2 from '../assets/Automations/GHL_Automation/SalesPipeline/GSheet2.jpg'
-    import Ghl_SP_Graph from '../assets/Automations/GHL_Automation/SalesPipeline/Graph.jpg'
+    import Ghl_SP_Pipline from '../assets/Automations/GHL_Automation/SalesPipeline/Pipline.webp'
+    import Ghl_SP_GSheet from '../assets/Automations/GHL_Automation/SalesPipeline/GSheet.webp'
+    import Ghl_SP_GSheet2 from '../assets/Automations/GHL_Automation/SalesPipeline/GSheet2.webp'
+    import Ghl_SP_Graph from '../assets/Automations/GHL_Automation/SalesPipeline/Graph.webp'
 
 
     // GoHighLevel Automation Videos
@@ -111,21 +111,25 @@
 
 
     // Pabbly Automations Benners
-    import Pabbly_Gif from '../assets/Automations/Pabbly_Automation/pabbly.png'
+    import Pabbly_Gif from '../assets/Automations/Pabbly_Automation/pabbly.webp'
+    
 
+
+    // Pabbly Automations Videos
+    import Pabbly_Demo from '../assets/Automations/Pabbly_Automation/pabbly_demo.mp4'
 
     // Zapier Automations Benners
-    import Zapier_GIF from '../assets/Automations/Zapier_Automation/Zapier.png'
+    import Zapier_GIF from '../assets/Automations/Zapier_Automation/Zapier.webp'
     import Zapier_demo from '../assets/Automations/Zapier_Automation/ZapierDemo/zapier_demo.gif'
     import zapier_Shopify from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/Shopify.gif'
 
 
     // ZAPIER AUTOMATION PICTURE  
     // Shopify Google Sheet FTP
-    import zapier_auto from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/auto.jpg'
-    import zapier_code from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/code.jpg'
-    import zapier_GSheet1 from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/GSheet1.jpg'
-    import zapier_GSheet2 from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/GSheet2.jpg'
+    import zapier_auto from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/auto.webp'
+    import zapier_code from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/code.webp'
+    import zapier_GSheet1 from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/GSheet1.webp'
+    import zapier_GSheet2 from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/GSheet2.webp'
 
     // ZAPIER AUTOMATION VIDEOS
     import zapier_Shopify_GSheet from '../assets/Automations/Zapier_Automation/Shopify_FTP_Gsheet/Shopify_GsheetFTP.mp4'
@@ -160,7 +164,7 @@ export const services = [
                 },
                 {
                     P_id: 1002,
-                    P_Heading: 'PUBLIC ADJUSTERS',
+                    P_Heading: 'Public Adjusters',
                     P_SubHeading: '',
                     P_Banner: Adjuster,
                     P_Gif: Adjuster_GIF,
@@ -210,7 +214,7 @@ export const services = [
                 },
                 {
                     P_id: 1007,
-                    P_Heading: 'DOMINION',
+                    P_Heading: 'Dominion',
                     P_SubHeading: '',
                     P_Banner: Dominion,
                     P_Gif: Dominion_GIF,
@@ -513,13 +517,15 @@ export const services = [
               projects : [
                 {
                     P_id: 3001,
-                    P_Heading: 'Quote Generator for Event food',
+                    P_Heading: 'Pabbly Demo',
                     P_SubHeading: '',
-                    P_Banner: Mike,
-                    P_Gif: Mike_GIF,
+                    P_Banner: Pabbly_Gif,
+                    P_Gif: '',
                     P_Mobile_GIF: '',
                     P_Url: 'https://app.leadcare.dk/v2/preview/cKXoYcrDE9iM9z4N00vF',
-                    P_Video: [],
+                    P_Video: [
+                      Pabbly_Demo,
+                    ],
                     P_Category: 'Automation',
                     P_Images: [
                       
@@ -529,7 +535,7 @@ export const services = [
             },
             {
                 card_Id: 302,
-              title: "zapier",
+              title: "Zapier",
               video: "",
               img: Zapier_GIF,
               content:
@@ -576,7 +582,7 @@ export const services = [
             },
             {
                 card_Id: 303,
-              title: "Go High Level Automations",
+              title: "Go High Level",
               video: "",
               img: GHL_Gif,
               content:

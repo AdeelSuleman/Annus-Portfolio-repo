@@ -47,6 +47,7 @@ function App() {
       } finally {
         setIsLoading(false); // ✅ loader off after check
       }
+      
     };
 
     checkLicense();

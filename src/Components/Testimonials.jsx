@@ -7,15 +7,15 @@ import Slider from "./Slider";
 
 
 // Images
-import tiffinea from '../assets/Testimonials/tiffinea.jpg'
+import tiffinea from '../assets/Testimonials/tiffinea.webp'
 import jamila from '../assets/Testimonials/jamila.webp'
-import client from '../assets/Testimonials/client.jpg'
+import client from '../assets/Testimonials/client.webp'
 
 
 // Reviews
-import tiffineaReview from '../assets/Testimonials/TiffineaReview.png'
+import tiffineaReview from '../assets/Testimonials/TiffineaReview.webp'
 import jamilaReview from '../assets/Testimonials/jamilaReview.MP4'
-import clientReview from '../assets/Testimonials/clientReview.png'
+import clientReview from '../assets/Testimonials/clientReview.webp'
 
 
 
@@ -145,8 +145,7 @@ const Testimonials = () => {
                     lg:w-[50vw] lg:mx-auto lg:text-Paragraph5
                     xl:w-[40vw] xl:text-Paragraph4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Outstanding experience! Annus helped automate our entire workflow and the results were amazing. Highly recommended.
         </p>
 
         <section
@@ -183,7 +182,7 @@ const Testimonials = () => {
                             xs:w-full xs:h-full"
                 >
                   {/* image circle Start */}
-                  <div className="relative z-10 border border-button/50 rounded-full overflow-hidden xs:w-full xs:h-full sm:w-[200px] sm:h-[200px] lg:w-full lg:h-full">
+                  <div className="relative z-10  border border-button/50 rounded-full overflow-hidden xs:w-full xs:h-full sm:w-[300px] sm:h-[300px] md:w-full md:h-full lg:w-full lg:h-full">
                     <AnimatePresence mode="wait">
                       <motion.img
                         key={TestiData[activeIndex].id}
@@ -207,7 +206,7 @@ const Testimonials = () => {
                   ease: "easeInOut",
                 }}
                   src={client} 
-                  className="rounded-full absolute
+                  className="rounded-full absolute 
                 xs:w-12 xs:h-12 xs:-top-3 xs:right-0
                 sm:w-14 sm:h-14 sm:top-5 sm:right-9
                 lg:top-2 lg:right-0" />
@@ -246,7 +245,7 @@ const Testimonials = () => {
             </motion.div>
             {/* Main circle End */}
 
-            <div className="absolute top-20 z-0 bg-button/40 w-[200px] h-[200px] rounded-full shadow-2xl shadow-button blur-3xl"></div>
+            <div className="absolute top-10 z-0 bg-button/40 rounded-full shadow-2xl shadow-button blur-3xl xs:w-[200px] xs:h-[200px] sm:w-[400px] sm:h-[400px] lg:w-[300px] lg:h-[300px]"></div>
 
           </div>
 

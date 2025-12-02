@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../App.css";
@@ -75,13 +77,14 @@ const Preview = () => {
             xs:w-[90%] xs:py-16
             md:w-[80vw]
             lg:w-[95vw]
-            xl:w-[85%]"
+            xl:w-[85%]
+            2xl:w-[1280px]"
         >
           {/* 👇 Animated heading */}
           <div className="mb-10">
             <h1
               ref={headingRef}
-              className="hero-text text-5xl font-bold capitalize text-white"
+              className="hero-text text-5xl font-bold capitalize text-white xs:ml-0 xs:text-center lg:ml-14 lg:text-left"
             >
               {project.P_Heading || "Untitled"}
             </h1>
@@ -89,43 +92,45 @@ const Preview = () => {
             {project.P_SubHeading && (
               <h1
                 ref={headingRef}
-                className="hero-text text-lg font-bold mt-3 capitalize text-white"
+                className="hero-text text-lg font-bold mt-3 capitalize text-white xs:ml-0 xs:text-center lg:ml-14 lg:text-left"
               >
                 {project.P_SubHeading}
               </h1>
             )}
           </div>
 
-          <div className="lg:flex justify-between items-center mt-10">
+          <div className="lg:flex justify-center items-center mt-10 lg:gap-x-10 p-0">
             {/* Laptop Mockup */}
-            <div className="w-full lg:w-[60%] xl:w-[70%]">
+            <div className="w-full lg:w-[60%] 2xl:w-[65%]">
               <div
                 className="relative mx-auto border-gray-700 bg-gray-950 border-[10px] rounded-t-xl 
-                xs:h-[172px] xs:max-w-[301px] 
+                xs:h-[172px] xs:max-w-[301px]
+                sm:h-[300px] sm:max-w-[530px]
                 md:h-[300px] md:max-w-[540px]
                 lg:h-[300px] lg:max-w-[500px]
-                xl:h-[540px] xl:max-w-[1000px]"
+                xl:max-w-[570px]
+                2xl:h-[450px] 2xl:max-w-[780px]"
               >
-                <div className="overflow-hidden h-[156px] md:h-[278px] xl:h-[523px]">
+                <div className="overflow-hidden h-[156px] sm:h-[280px] xl:h-[450px]">
                   <img
                     src={project.P_Gif}
                     alt={project.P_Name}
                     className="object-cover
-                      h-[156px] md:h-[278px] xl:h-[565px] w-[100%]"
+                      xs:h-[156px] sm:h-[280px] xl:h-[280px] 2xl:h-[432px] w-[100%]"
                   />
                 </div>
               </div>
 
-              <div className="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px] xl:max-w-[1100px] xl:h-[25px]">
+              <div className="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] sm:max-w-[580px] md:h-[21px] md:max-w-[597px] xl:max-w-[650px] xl:h-[25px] 2xl:max-w-[880px]">
                 <div className="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
               </div>
             </div>
 
             {/* Mobile Mockup */}
-            <div className="w-full lg:w-[40%] xl:w-[30%] flex justify-center xs:mt-10 lg:mt-0">
+            <div className="w-full lg:w-[30%] xl:w-[30%] flex justify-center xs:mt-10 lg:mt-0">
               <div
                 className="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem]
-      h-[650px] w-[325px] xl:w-[400px] xl:h-[700px]"
+                    h-[580px] w-[325px] "
               >
                 {/* 🔁 Loader (only for iframe) */}
                 {isLoading && project.P_Url && (
@@ -140,7 +145,7 @@ const Preview = () => {
                   </div>
                 )}
 
-                <div className="rounded-[2rem] overflow-hidden w-[300px] h-[622px] xl:w-[370px] xl:h-[670px] cursor-all-scroll">
+                <div className="rounded-[2rem] overflow-hidden w-[300px] h-[550px] cursor-all-scroll">
                   {/* ✅ Condition 1: Show iframe if P_Url exists */}
                   {project.P_Url ? (
                     <iframe
@@ -192,8 +197,8 @@ const Preview = () => {
           className="p-2 mx-auto text-white
             xs:w-[90%] xs:py-16
             md:w-[80vw]
-            lg:w-[95vw]
-            xl:w-[85%]"
+            xl:w-[85%]
+            2xl:w-[1280px]"
         >
           <div className="mb-10">
             <h1
@@ -236,7 +241,18 @@ const Preview = () => {
                   className="relative rounded-lg overflow-hidden"
                   onContextMenu={(e) => e.preventDefault()} // ✅ disable right click
                 >
-                  <video
+                  <Plyr
+                    source={{
+                      type: "video",
+                      sources: [{ src: videos, type: "video/mp4" }],
+                    }}
+                    options={{
+                      controls: ["play", "progress", "mute", "volume", "fullscreen"],
+                      autoplay: false,
+                      muted: false,
+                    }}
+                  />
+                  {/* <video
                     src={videos}
                     autoPlay
                     loop
@@ -246,7 +262,7 @@ const Preview = () => {
                     controlsList="nodownload noplaybackrate" // ✅ disable download option
                     disablePictureInPicture // ✅ disable PiP mode
                     className="rounded-lg object-cover w-full select-none pointer-events-auto"
-                  />
+                  /> */}
                   <div className="absolute inset-0 bg-transparent pointer-events-none"></div>
                 </div>
               ))}
